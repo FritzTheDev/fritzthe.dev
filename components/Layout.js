@@ -12,7 +12,6 @@ import {
   PencilAltIcon,
   QuestionMarkCircleIcon,
   ChevronDownIcon,
-  ViewListIcon,
   LibraryIcon,
 } from "@heroicons/react/outline";
 import { useRouter } from "next/dist/client/router";
@@ -40,7 +39,7 @@ const categories = [
     icon: BookmarkAltIcon,
   },
   {
-    name: "Archives",
+    name: "Blog Archives",
     href: "/blog",
     description: "All of my blog posts, sorted in reverse chronological order.",
     icon: LibraryIcon,
@@ -58,7 +57,7 @@ const resources = [
     name: "Contact",
     description:
       "Learn how to maximize our platform to get the most out of it.",
-    href: "#",
+    href: "/contact",
     icon: BookmarkAltIcon,
   },
   {
@@ -276,17 +275,6 @@ export const Layout = ({ children, title, description }) => {
                             </a>
                           </Link>
                         ))}
-                        <Link href="/blog" passHref>
-                          <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-                            <ViewListIcon
-                              className="flex-shrink-0 h-6 w-6 text-blue-600"
-                              aria-hidden="true"
-                            />
-                            <span className="ml-3 text-base font-medium text-gray-900">
-                              Blog Archives
-                            </span>
-                          </a>
-                        </Link>
                       </nav>
                     </div>
                   </div>
@@ -294,7 +282,7 @@ export const Layout = ({ children, title, description }) => {
                     <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                       {resources.map((item) => (
                         <Link key={item.name} href={item.href} passHref>
-                          <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                          <a className="text-base text-center font-medium text-gray-900 hover:text-gray-700">
                             {item.name}
                           </a>
                         </Link>

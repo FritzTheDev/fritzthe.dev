@@ -3,7 +3,7 @@ import { Layout } from "../components/Layout";
 
 export default function Home() {
   return (
-    <Layout title="Fritz Johnson / Web Developer">
+    <Layout title="Fritz Johnson / Web Developer" description="Hey, there - I'm Fritz. I'm a fullstack web developer who works mostly in Javascript. Come say hi!">
       <div className="absolute w-screen">
         <main className="flex flex-col-reverse lg:block lg:relative">
           <div className="mx-auto max-w-7xl w-full text-center lg:pt-40 lg:pb-44 lg:text-left">
@@ -39,9 +39,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative mb-2 lg:mb-0 p-4 lg:p-0 flex justify-center min-h-full items-center w-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-black">
+          <div className="relative mb-2 lg:mb-0 p-2 lg:p-0 flex justify-center min-h-full items-center w-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-black">
             <img
-              className="rounded-2xl lg:rounded-full object-fill w-2/4 lg:w-11/12 h-auto bg-gradient-to-r border-8 border-white from-blue-800 via-blue-600 to-blue-400"
+              className="rounded-full object-fill w-7/12 lg:w-11/12 h-auto bg-gradient-to-r border-8 border-white from-blue-800 via-blue-600 to-blue-400"
               src="/fritz-portrait-square.png"
               alt="Portrait of Fritz"
             />
