@@ -42,8 +42,7 @@ const categories = [
   {
     name: "Archives",
     href: "/blog",
-    description:
-      "All of my blog posts, sorted in reverse chronological order.",
+    description: "All of my blog posts, sorted in reverse chronological order.",
     icon: LibraryIcon,
   },
 ];
@@ -89,12 +88,19 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export const Layout = ({ children, title }) => {
+export const Layout = ({ children, title, description }) => {
   const { pathname } = useRouter();
   return (
     <div className="relative bg-gray-50">
       <Head>
         <title>{title}</title>
+        <meta
+          name="description"
+          content={
+            description ||
+            "Hey, there - I'm Fritz. I'm a fullstack web developer who works mostly in Javascript."
+          }
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@FritzTheDev" />
         <meta name="twitter:creator" content="@FritzTheDev" />
@@ -105,7 +111,10 @@ export const Layout = ({ children, title }) => {
         <meta property="og:title" content={title} />
         <meta
           property="og:description"
-          content="Hey, there - I'm Fritz. I'm a fullstack web developer who works mostly in Javascript."
+          content={
+            description ||
+            "Hey, there - I'm Fritz. I'm a fullstack web developer who works mostly in Javascript."
+          }
         />
         <meta
           property="og:image"
