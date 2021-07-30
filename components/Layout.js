@@ -14,6 +14,7 @@ import {
   ChevronDownIcon,
   ExclamationCircleIcon,
   ViewListIcon,
+  LibraryIcon,
 } from "@heroicons/react/outline";
 import { useRouter } from "next/dist/client/router";
 
@@ -46,6 +47,13 @@ const categories = [
       "I'm no underwriting pro - but that doesn't stop me from trying! Learn how I think about value.",
     icon: ExclamationCircleIcon,
   },
+  {
+    name: "Archives",
+    href: "/blog",
+    description:
+      "All of my blog posts, sorted in reverse chronological order.",
+    icon: LibraryIcon,
+  },
 ];
 
 const resources = [
@@ -63,7 +71,7 @@ const resources = [
     icon: BookmarkAltIcon,
   },
   {
-    name: "Calendar",
+    name: "Calendly",
     description: "Get on my calendar.",
     href: "https://calendly.com/fritzthedev",
     icon: CalendarIcon,
@@ -119,7 +127,7 @@ export const Layout = ({ children, title }) => {
               <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
                 <div className="flex justify-start lg:w-0 lg:flex-1">
                   <Link href="/" passHref>
-                    <a className="text-4xl italic font-extrabold text-black">
+                    <a className="text-4xl italic font-extrabold text-blue-600">
                       FritzTheDev
                     </a>
                   </Link>
@@ -133,7 +141,7 @@ export const Layout = ({ children, title }) => {
                 <Popover.Group as="nav" className="hidden md:flex">
                   <Link href="/hire" passHref>
                     <a className="text-base font-medium mr-8 text-blue-600 hover:text-blue-900">
-                      Looking to Hire?
+                      Need A Website?
                     </a>
                   </Link>
                   <Link href="/about" passHref>
@@ -148,12 +156,7 @@ export const Layout = ({ children, title }) => {
                   </Link>
                   <Link href="https://calendly.com/fritzthedev" passHref>
                     <a className="text-base font-medium mr-8 text-gray-600 hover:text-gray-900">
-                      Calendar
-                    </a>
-                  </Link>
-                  <Link href="/blog" passHref>
-                    <a className="text-base font-medium mr-8 text-gray-600 hover:text-gray-900">
-                      Blog
+                      Calendly
                     </a>
                   </Link>
                   <Popover className="relative">
@@ -165,7 +168,7 @@ export const Layout = ({ children, title }) => {
                             "mr-6 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                           )}
                         >
-                          <span>Categories</span>
+                          <span>Development Blog</span>
                           <ChevronDownIcon
                             className={classNames(
                               open ? "text-blue-600" : "text-gray-600",
@@ -246,7 +249,7 @@ export const Layout = ({ children, title }) => {
                   <div className="pt-5 pb-6 px-5">
                     <div className="flex items-center justify-between">
                       <Link href="/" passHref>
-                        <a className="text-4xl outline-none italic font-extrabold text-black">
+                        <a className="text-4xl outline-none italic font-extrabold text-blue-600">
                           FritzTheDev
                         </a>
                       </Link>
@@ -272,17 +275,17 @@ export const Layout = ({ children, title }) => {
                             </a>
                           </Link>
                         ))}
-                          <Link href='/blog' passHref>
-                            <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-                              <ViewListIcon
-                                className="flex-shrink-0 h-6 w-6 text-blue-600"
-                                aria-hidden="true"
-                              />
-                              <span className="ml-3 text-base font-medium text-gray-900">
-                                Blog Archives
-                              </span>
-                            </a>
-                          </Link>
+                        <Link href="/blog" passHref>
+                          <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                            <ViewListIcon
+                              className="flex-shrink-0 h-6 w-6 text-blue-600"
+                              aria-hidden="true"
+                            />
+                            <span className="ml-3 text-base font-medium text-gray-900">
+                              Blog Archives
+                            </span>
+                          </a>
+                        </Link>
                       </nav>
                     </div>
                   </div>
@@ -299,7 +302,7 @@ export const Layout = ({ children, title }) => {
                     <div>
                       <Link href="/hire" passHref>
                         <a className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700">
-                          Hiring Engineers? Click Here
+                          Need A Website? Start Here
                         </a>
                       </Link>
                     </div>
