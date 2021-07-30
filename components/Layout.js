@@ -12,7 +12,6 @@ import {
   PencilAltIcon,
   QuestionMarkCircleIcon,
   ChevronDownIcon,
-  ExclamationCircleIcon,
   ViewListIcon,
   LibraryIcon,
 } from "@heroicons/react/outline";
@@ -39,13 +38,6 @@ const categories = [
     description:
       "Let me teach you something about programming while you're here! Don't worry - I won't test you on it!",
     icon: BookmarkAltIcon,
-  },
-  {
-    name: "Blunderwriting",
-    href: "/blog/tutorials",
-    description:
-      "I'm no underwriting pro - but that doesn't stop me from trying! Learn how I think about value.",
-    icon: ExclamationCircleIcon,
   },
   {
     name: "Archives",
